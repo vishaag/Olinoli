@@ -1,0 +1,188 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+@media screen and (min-width: 0em) {
+  body nav {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    height: 2em;
+    background-color: #d71921; }
+    body nav:before, body nav:after {
+      content: '';
+      display: table; }
+    body nav:after {
+      clear: both; }
+    body nav:last-child {
+      margin-right: 0%; }
+    body nav img {
+      height: 1.7em;
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0.2em; }
+      body nav img:before, body nav img:after {
+        content: '';
+        display: table; }
+      body nav img:after {
+        clear: both; }
+  body aside {
+    display: none; }
+  body article header {
+    display: none; } }
+@media screen and (min-width: 64.063em) {
+  body {
+      /*aside{
+        @include span(0.15);
+        div.nav{        
+          background-color: $heather;
+          min-height: 100vh;
+         // box-shadow:inset -0.125em 0em 0em 0 gray;  
+
+
+          ul{
+          padding-top: 2em;
+          padding-left: 0.5em;
+          padding-right: 0.5em;
+          padding-bottom: 2em;
+            li{
+
+              width: 90%;
+              padding: 0.5em;
+              margin-bottom: 0.25em;
+              font-size: 1.2em;
+              list-style: none;
+              box-shadow:inset 0 0 0.125em 0 gray;
+              @include border-radius(0.25em);
+              background-color: $heather;
+            }
+
+            li:hover{
+              background-color: $emirates;
+              color: $heather;
+              cursor: pointer;
+            }
+          }
+        }
+      }*/ }
+    body nav {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      text-align: inherit;
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 3%;
+      height: 2em;
+      background-color: #d71921;
+      padding-top: 0.45em;
+      padding-bottom: 0.45em;
+      position: relative; }
+      body nav:before, body nav:after {
+        content: '';
+        display: table; }
+      body nav:after {
+        clear: both; }
+      body nav:last-child {
+        margin-right: 0%; }
+      body nav img {
+        position: absolute;
+        float: left;
+        height: 2em;
+        padding-top: 0.2em;
+        padding-left: 0.7em; }
+      body nav ul {
+        text-align: center; }
+        body nav ul li {
+          display: inline-block;
+          color: white;
+          font-size: 1.3em;
+          padding-right: 1em;
+          padding-top: 0.25em; }
+    body article {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+      min-height: 100vh; }
+      body article:before, body article:after {
+        content: '';
+        display: table; }
+      body article:after {
+        clear: both; }
+      body article header {
+        display: block;
+        position: relative;
+        height: 2.3em;
+        background: #efefef;
+        -webkit-box-shadow: 0px 6px 5px 0px gray;
+        -moz-box-shadow: 0px 6px 5px 0px gray;
+        box-shadow: 0px 6px 5px 0px gray; }
+        body article header h3 {
+          padding-top: 0.5em;
+          padding-left: 0.5em;
+          font-weight: 400; }
+        body article header ul {
+          padding-right: 0.3em;
+          padding-bottom: 0.1em;
+          position: absolute;
+          right: 0;
+          bottom: 0; }
+          body article header ul li {
+            padding-left: 0.5em;
+            display: inline-block; }
+    body section img {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%;
+      height: 94vh; }
+      body section img:before, body section img:after {
+        content: '';
+        display: table; }
+      body section img:after {
+        clear: both; } }

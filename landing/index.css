@@ -1,0 +1,72 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif; }
+
+@media screen and (min-width: 0em) {
+  body nav {
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    height: 2em;
+    background-color: white;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em; }
+    body nav div.nav_container {
+      width: 100%; }
+      body nav div.nav_container img {
+        height: 2em; } }
+      @media screen and (min-width: 0em) and (max-width: 64.0629em) {
+        body nav div.nav_container img {
+          *zoom: 1;
+          width: auto;
+          max-width: 1410px;
+          float: none;
+          display: block;
+          margin-right: auto;
+          margin-left: auto;
+          padding-left: 0;
+          padding-right: 0; }
+          body nav div.nav_container img:before, body nav div.nav_container img:after {
+            content: '';
+            display: table; }
+          body nav div.nav_container img:after {
+            clear: both; } }
+
+@media screen and (min-width: 64.063em) {
+  body nav {
+    position: fixed;
+    width: 100%;
+    height: 2em;
+    background-color: white;
+    padding-top: 0.35em;
+    padding-bottom: 0.35em; }
+    body nav div.nav_container {
+      *zoom: 1;
+      width: auto;
+      max-width: 80%;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0; }
+      body nav div.nav_container:before, body nav div.nav_container:after {
+        content: '';
+        display: table; }
+      body nav div.nav_container:after {
+        clear: both; } }

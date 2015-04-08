@@ -1,0 +1,329 @@
+@import 'jeet/index';
+//@include edit;
+
+//Variable come here
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100);
+
+$heather: #efefef;
+$light_green: #c1f0c1;
+$nav_blue: #862222;
+$emirates: #d71921;
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@media screen and (min-width: 0em){
+
+	body{
+		nav{
+			@include col(1);
+			height: 2em;
+			background-color: $emirates;
+
+			img{
+				height:1.7em;
+				@include center;
+				padding-top: 0.2em;
+			}
+		}
+
+		aside{
+			display: none;
+		}
+
+		article{
+			@include span(1);
+			background-color: white;
+			min-height: 100vh;
+			div.cover{
+				img{
+					width: 100%;
+				}
+			}
+
+			header{
+					background-color: $heather;
+					
+					ul.sort1{		
+
+						li{			
+							padding-left: 0.1em;
+							padding-right: 0.1em;					
+							display: inline-block;	
+							border: 1px solid $emirates;
+							@include border-radius(0.35em);	
+							margin: 0.2em;
+
+										
+						}
+					}
+			}
+
+			div.below_header{
+			margin-bottom: 3em;
+			width: 98%;
+			margin: 0 auto;
+			margin-bottom: 2.5em;
+				div.sort2{
+					
+					li{
+						display: inline-block;
+						margin-left: 0.5em;
+						float: right;
+					}
+
+					li:active{
+						text-decoration: underline;
+					}
+				}
+
+				input{
+									
+					width: 100%;					
+					margin-top: 0.5em;
+					border:none;
+					border-bottom: 1px solid gray;
+					height: 2em;
+				}
+
+				
+			}
+
+			section{
+
+					div.album{
+					h3{
+						font-weight: 100;
+						padding-bottom: 1em;
+					}
+					padding: 1em;
+					@include cf();
+					div{
+						@include span(1/3);
+
+						@media screen and (max-width: 420px){
+							@include span(1/2);
+						}
+						margin-bottom: 1em;
+
+						div.img_box img.avatar{
+							width: 100%;						
+					    	cursor: pointer;
+
+					    	
+						}					
+
+						div.img_box{
+							position:relative;
+							width: 90%;	
+
+						}						
+
+						div.imagetext *{						
+							vertical-align: top;
+							display: inline-block;
+							margin-right: 0.3em;
+						}
+
+						div.imagetext{	
+							visibility: hidden;
+							position:absolute;
+							bottom:0;
+							left: 0;
+							margin-bottom: 0.2em;
+							width: 100%;						
+							font-weight: 100;
+							font-size: 0.8em;
+							background-color: none;					
+							color: black;
+							box-sizing: border-box;
+							opacity:1;
+  							transition:opacity 0.5s linear;
+
+						}
+
+
+						div.img_box:hover{							
+							div.imagetext{
+								visibility: visible;
+								background: rgba(0,255,255, 0.5);  
+							    -moz-transition: background .3s linear;  
+							    -webkit-transition: background .3s linear;  
+							    -o-transition: background .3s linear;  
+							    transition: background .3s linear; 
+							}
+
+
+
+					
+						
+							  
+
+
+						}
+
+						h3{
+							width: 90%;
+							font-weight: 400;
+							padding-bottom: 0;
+							
+						}
+
+						div.social *{
+							vertical-align: top;
+							display: inline-block;
+							margin-right: 0.3em;
+						}
+						div.social{						
+							margin-bottom: 0.2em;
+							width: 90%;
+							font-weight: 100;
+							font-size: 0.8em;
+							background-color: #fbfbfb;						
+							color: black;
+							box-sizing: border-box;
+							img{
+								width: 1.3em;
+							}
+
+							h6{
+								font-weight: 400;
+								font-size: 0.9em;
+							}
+
+						}
+						div.meta{
+							box-sizing: border-box;						
+							font-size: 1em;
+							background-color: #fbfbfb;
+							color: black;
+							width: 90%;
+							margin-bottom: 0.2em;					
+							
+						}
+					}
+				}
+				
+		
+			}
+
+
+
+		}
+	}
+}
+
+
+
+
+
+@media screen and (min-width: 64.063em){
+
+	body{
+
+			aside{
+				@include span(0.15);
+				background-color: $heather;
+				min-height: 100vh;
+			}
+
+			article{
+				@include span(0.7);
+				min-height: 100vh;
+				div.cover{
+					img{
+						width: 100%;
+					}						
+				}
+
+				header{
+						box-shadow: 0 0 0.125em 0 black;
+						padding:1em;
+							ul.sort1{
+								li:hover{
+								background-color:$emirates;
+								@include border-radius(0.15em);
+								color: white;								
+								}
+
+								li{
+									border:none;
+									margin: 0em;
+									cursor: pointer;
+								}
+							}							
+						
+				}
+
+
+				div.below_header{
+					margin: 0 auto;
+					margin-bottom: 1.5em;
+					@include span(1);
+
+					div.sort2{
+						float: right;
+						li{
+							padding-left: 0.1em;
+							padding-right: 0.1em;					
+							display: inline-block;							
+							cursor: pointer;
+							border: 2px solid $emirates;
+							border-radius: 0 0 0.5em 0.5em;
+							text-decoration: none;
+						}
+
+						li:hover{
+							color: white;
+							background-color: $emirates;						
+						}
+
+						li:active{
+						text-decoration: none;
+						}
+					}
+
+					input{
+					background:white url(http://i.imgur.com/lFkqn.png) left center no-repeat;
+					padding-left: 2em;
+					width: auto;
+					margin-top: 0.5em;
+					margin-left: 0.5em;
+					height: 2em;
+					border:none;
+					border-bottom: 1px solid gray;
+					}
+
+					
+				}
+
+
+				section{
+
+					div.album{
+					div{
+						@include span(1/4);
+					}
+				}
+					
+
+				
+				}
+			}
+	}
+}
+
+
