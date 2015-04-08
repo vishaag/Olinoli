@@ -1,0 +1,311 @@
+@import 'jeet/index';
+//@include edit;
+
+//Variable come here
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100);
+
+$heather: #efefef;
+$light_green: #c1f0c1;
+$nav_blue: #862222;
+$emirates: #d71921;
+
+
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Lato', sans-serif;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@media screen and (min-width: 0em){
+
+	body{
+		nav{
+			@include col(1);
+			height: 2em;
+			background-color: $emirates;
+
+			img{
+				height:1.7em;
+				@include center;
+				padding-top: 0.2em;
+			}
+		}
+
+		aside{
+			display: none;
+		}
+
+		article{
+			@include span(1);
+			background-color: white;
+			min-height: 100vh;
+			div.cover{
+				img{
+					width: 100%;
+				}
+			}
+
+			header{
+					background-color: $heather;
+					
+					ul.sort1{		
+
+						li{			
+							padding-left: 0.1em;
+							padding-right: 0.1em;					
+							display: inline-block;	
+							border: 1px solid $emirates;
+							@include border-radius(0.35em);	
+							margin: 0.2em;
+
+										
+						}
+					}
+			}
+
+			div.below_header{
+			margin-bottom: 3em;
+				ul.sort2{
+					li{
+						display: inline-block;
+						margin-left: 0.5em;
+						float: right;
+
+					}
+				}
+			}
+
+			section{
+				div.songs{ 
+					@include span(0.9, $offset:0.05);				
+					@include cf();
+					div#song{
+						margin-bottom: 1.5em;
+						border-bottom: 1px solid grey;
+
+					}
+
+					div{		
+
+						@include span(1);
+						img.play{					
+							display: inline-block;
+							cursor: pointer;
+							float: left;
+							margin-right: 0.5em;
+						}
+
+						div.music_data{
+							float: left;
+							width: auto;
+							display: inline-block;
+
+							h5{
+								font-weight: 400;
+							}
+
+						}
+
+						div.icons{
+							float: right;
+							width: auto;
+							img{
+								width: 1.3em;
+								padding-top: 0.4em;
+								padding-left: 1em;
+								cursor: pointer;
+							}
+						}
+
+						h4.duration{
+							float: right;
+							padding-top: 0.6em;
+							font-weight: 400;
+					
+							
+						}
+
+						div.social_features{
+						
+
+							img{
+								width: 1.3em;
+							}
+						}
+
+						div.social_features_left{
+							display: none;
+						}
+
+						div.social_features *{
+							float: right;
+							display: inline-block;
+							margin-right: 0.3em;
+						}
+
+						@media screen and (max-width: 350px){
+
+						
+
+							h4.duration{							
+							padding:0.5em;					
+							}
+						}
+
+
+
+					}
+				}
+
+				div.artist{
+					display: none;
+				}
+
+
+		
+			}
+
+
+
+		}
+	}
+}
+
+
+
+
+
+@media screen and (min-width: 64.063em){
+
+	body{
+
+			aside{
+				@include span(0.15);
+				background-color: $heather;
+				min-height: 100vh;
+			}
+
+			article{
+				@include span(0.7);
+				min-height: 100vh;
+				div.cover{
+					img{
+						width: 100%;
+					}						
+				}
+
+				header{
+						box-shadow: 0 0 0.125em 0 black;
+						padding:1em;
+							ul.sort1{
+								li:hover{
+								background-color:$emirates;
+								@include border-radius(0.15em);
+								color: white;								
+								}
+
+								li{
+									border:none;
+									margin: 0em;
+									cursor: pointer;
+								}
+							}							
+						
+				}
+
+
+				div.below_header{
+					
+					@include span(1);
+					ul.sort2{
+						float: right;
+						li{
+							padding-left: 0.1em;
+							padding-right: 0.1em;					
+							display: inline-block;							
+							cursor: pointer;
+							border: 2px solid $emirates;
+							border-radius: 0 0 0.5em 0.5em;
+						}
+
+						li:hover{
+							color: white;
+							background-color: $emirates;						
+						}
+					}
+				}
+
+
+				section{
+
+					div.songs{ 
+					@include span(0.5);
+					padding: 1em;
+					border-right:0.1em solid black;
+					@include cf();
+					div#song{
+						margin-bottom: 1.5em;
+						border-bottom: 1px solid gray;						
+
+					}
+
+					div{
+							h4.duration{
+								font-weight: bold;
+							}
+						}
+				}
+
+
+						div.artist{
+					@include span(0.45);
+
+					h3{		
+						text-align: center;	
+						padding: 1em;
+						text-decoration: underline;
+						font-weight:400;
+						
+
+					}
+
+					h4{
+						text-align: center;
+						font-weight: 400;
+					}
+
+					h6{
+						text-align: right;
+						cursor: pointer;
+					}
+					
+					div.pics{
+						padding:1em;
+
+						img{
+							@include span(1/2);
+							margin-bottom: 2em;						
+							
+						}					
+					}
+
+					p{
+						padding-left: 1em;
+						padding-right: 1em;
+						font-weight: 400;
+
+					}
+				}
+				}
+			}
+	}
+}

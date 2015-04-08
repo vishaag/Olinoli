@@ -1,0 +1,334 @@
+/*  Syntax Quick Reference
+  --------------------------
+  column($ratios: 1, $offset: 0, $cycle: 0, $uncycle: 0, $gutter: $jeet-gutter)
+  span($ratio: 1, $offset: 0)
+  shift($ratios: 0, $col_or_span: column, $gutter: $jeet-gutter)
+  unshift()
+  edit()
+  center($max_width: 1410px, $pad: 0)
+  stack($pad: 0, $align: false)
+  unstack()
+  align($direction: both)
+  cf()
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato:400,100);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif; }
+
+@media screen and (min-width: 0em) {
+  body nav {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    text-align: inherit;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 3%;
+    height: 2em;
+    background-color: #d71921; }
+    body nav:before, body nav:after {
+      content: '';
+      display: table; }
+    body nav:after {
+      clear: both; }
+    body nav:last-child {
+      margin-right: 0%; }
+    body nav img {
+      height: 1.7em;
+      *zoom: 1;
+      width: auto;
+      max-width: 1410px;
+      float: none;
+      display: block;
+      margin-right: auto;
+      margin-left: auto;
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 0.2em; }
+      body nav img:before, body nav img:after {
+        content: '';
+        display: table; }
+      body nav img:after {
+        clear: both; }
+  body aside {
+    display: none; }
+  body article {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 100%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: white;
+    min-height: 100vh; }
+    body article:before, body article:after {
+      content: '';
+      display: table; }
+    body article:after {
+      clear: both; }
+    body article div.cover img {
+      width: 100%; }
+    body article header {
+      background-color: #efefef; }
+      body article header ul.sort1 li {
+        padding-left: 0.1em;
+        padding-right: 0.1em;
+        display: inline-block;
+        border: 1px solid #d71921;
+        -webkit-border-radius: 0.35em;
+        -moz-border-radius: 0.35em;
+        -ms-border-radius: 0.35em;
+        border-radius: 0.35em;
+        margin: 0.2em; }
+    body article div.below_header {
+      margin-bottom: 3em; }
+      body article div.below_header ul.sort2 li {
+        display: inline-block;
+        margin-left: 0.5em;
+        float: right; }
+    body article section div.songs {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 90%;
+      margin-left: 5%;
+      margin-right: 0%;
+      *zoom: 1; }
+      body article section div.songs:before, body article section div.songs:after {
+        content: '';
+        display: table; }
+      body article section div.songs:after {
+        clear: both; }
+      body article section div.songs:before, body article section div.songs:after {
+        content: '';
+        display: table; }
+      body article section div.songs:after {
+        clear: both; }
+      body article section div.songs div#song {
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid grey; }
+      body article section div.songs div {
+        *zoom: 1;
+        float: left;
+        display: inline;
+        clear: none;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: inherit;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%; }
+        body article section div.songs div:before, body article section div.songs div:after {
+          content: '';
+          display: table; }
+        body article section div.songs div:after {
+          clear: both; }
+        body article section div.songs div img.play {
+          display: inline-block;
+          cursor: pointer;
+          float: left;
+          margin-right: 0.5em; }
+        body article section div.songs div div.music_data {
+          float: left;
+          width: auto;
+          display: inline-block; }
+          body article section div.songs div div.music_data h5 {
+            font-weight: 400; }
+        body article section div.songs div div.icons {
+          float: right;
+          width: auto; }
+          body article section div.songs div div.icons img {
+            width: 1.3em;
+            padding-top: 0.4em;
+            padding-left: 1em;
+            cursor: pointer; }
+        body article section div.songs div h4.duration {
+          float: right;
+          padding-top: 0.6em;
+          font-weight: 400; }
+        body article section div.songs div div.social_features img {
+          width: 1.3em; }
+        body article section div.songs div div.social_features_left {
+          display: none; }
+        body article section div.songs div div.social_features * {
+          float: right;
+          display: inline-block;
+          margin-right: 0.3em; } }
+      @media screen and (min-width: 0em) and (max-width: 350px) {
+        body article section div.songs div h4.duration {
+          padding: 0.5em; } }
+@media screen and (min-width: 0em) {
+    body article section div.artist {
+      display: none; } }
+@media screen and (min-width: 64.063em) {
+  body aside {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 15%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: #efefef;
+    min-height: 100vh; }
+    body aside:before, body aside:after {
+      content: '';
+      display: table; }
+    body aside:after {
+      clear: both; }
+  body article {
+    *zoom: 1;
+    float: left;
+    display: inline;
+    clear: none;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: inherit;
+    width: 70%;
+    margin-left: 0%;
+    margin-right: 0%;
+    min-height: 100vh; }
+    body article:before, body article:after {
+      content: '';
+      display: table; }
+    body article:after {
+      clear: both; }
+    body article div.cover img {
+      width: 100%; }
+    body article header {
+      box-shadow: 0 0 0.125em 0 black;
+      padding: 1em; }
+      body article header ul.sort1 li:hover {
+        background-color: #d71921;
+        -webkit-border-radius: 0.15em;
+        -moz-border-radius: 0.15em;
+        -ms-border-radius: 0.15em;
+        border-radius: 0.15em;
+        color: white; }
+      body article header ul.sort1 li {
+        border: none;
+        margin: 0em;
+        cursor: pointer; }
+    body article div.below_header {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 100%;
+      margin-left: 0%;
+      margin-right: 0%; }
+      body article div.below_header:before, body article div.below_header:after {
+        content: '';
+        display: table; }
+      body article div.below_header:after {
+        clear: both; }
+      body article div.below_header ul.sort2 {
+        float: right; }
+        body article div.below_header ul.sort2 li {
+          padding-left: 0.1em;
+          padding-right: 0.1em;
+          display: inline-block;
+          cursor: pointer;
+          border: 2px solid #d71921;
+          border-radius: 0 0 0.5em 0.5em; }
+        body article div.below_header ul.sort2 li:hover {
+          color: white;
+          background-color: #d71921; }
+    body article section div.songs {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 50%;
+      margin-left: 0%;
+      margin-right: 0%;
+      padding: 1em;
+      border-right: 0.1em solid black;
+      *zoom: 1; }
+      body article section div.songs:before, body article section div.songs:after {
+        content: '';
+        display: table; }
+      body article section div.songs:after {
+        clear: both; }
+      body article section div.songs:before, body article section div.songs:after {
+        content: '';
+        display: table; }
+      body article section div.songs:after {
+        clear: both; }
+      body article section div.songs div#song {
+        margin-bottom: 1.5em;
+        border-bottom: 1px solid gray; }
+      body article section div.songs div h4.duration {
+        font-weight: bold; }
+    body article section div.artist {
+      *zoom: 1;
+      float: left;
+      display: inline;
+      clear: none;
+      padding-left: 0;
+      padding-right: 0;
+      text-align: inherit;
+      width: 45%;
+      margin-left: 0%;
+      margin-right: 0%; }
+      body article section div.artist:before, body article section div.artist:after {
+        content: '';
+        display: table; }
+      body article section div.artist:after {
+        clear: both; }
+      body article section div.artist h3 {
+        text-align: center;
+        padding: 1em;
+        text-decoration: underline;
+        font-weight: 400; }
+      body article section div.artist h4 {
+        text-align: center;
+        font-weight: 400; }
+      body article section div.artist h6 {
+        text-align: right;
+        cursor: pointer; }
+      body article section div.artist div.pics {
+        padding: 1em; }
+        body article section div.artist div.pics img {
+          *zoom: 1;
+          float: left;
+          display: inline;
+          clear: none;
+          padding-left: 0;
+          padding-right: 0;
+          text-align: inherit;
+          width: 50%;
+          margin-left: 0%;
+          margin-right: 0%;
+          margin-bottom: 2em; }
+          body article section div.artist div.pics img:before, body article section div.artist div.pics img:after {
+            content: '';
+            display: table; }
+          body article section div.artist div.pics img:after {
+            clear: both; }
+      body article section div.artist p {
+        padding-left: 1em;
+        padding-right: 1em;
+        font-weight: 400; } }
